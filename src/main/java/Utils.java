@@ -10,7 +10,7 @@ public class Utils {
     private static int m = 9;
 
     private Utils(){
-        this.rand = new Random(seed);
+
     }
 
 
@@ -22,6 +22,7 @@ public class Utils {
      */
     public static void init(int maxCardsNumber){
         m = maxCardsNumber;
+        rand = new Random(seed);
     }
 
     /**
