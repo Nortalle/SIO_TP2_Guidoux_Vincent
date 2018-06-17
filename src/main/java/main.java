@@ -11,7 +11,7 @@ public class main {
 
     public static void main(String[] args) {
         final int m = 9;
-        final double nbrSimulations = 5000000;
+        final double nbrSimulations = 50000;
         int mode = 0;
 
         List<Double> resultats = new LinkedList<>();
@@ -52,19 +52,19 @@ public class main {
             int taille = (int) (max - min);
 
             int[] what = new int[taille + 1];
-
+/*
             for (int i = (int) min, k = 0; i <= (int) (max); i++, k++) {
                 what[k] = Collections.frequency(resultats, (double) i);
                 System.out.println(i + " jours : " + what[k]);
             }
-
+*/
 
             BufferedWriter out;
             try {
-                out = new BufferedWriter(new FileWriter(new File("test" + mode + ".csv")));
+                out = new BufferedWriter(new FileWriter(new File("mode_" + (mode + 1) + "_simu_" + (int)nbrSimulations + "_m_" + m + ".csv")));
                 out.newLine();
                 for (double s : resultats) {
-                    out.write(Double.toString(s)); //toString rend :"#nom;#prenom;#mail"
+                    out.write(Integer.toString((int)s)); //toString rend :"#nom;#prenom;#mail"
                     out.newLine();
                 }
                 out.close();
