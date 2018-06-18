@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SIO:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SIO_jar</output-path>
+    <root id="archive" name="SIO.jar">
+      <element id="module-output" name="SIO" />
+    </root>
+  </artifact>
+</component>
